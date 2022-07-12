@@ -1,0 +1,34 @@
+html, body{
+    background-color: black;
+}
+.navbar{
+    background-color: darkblue;
+}
+
+.main-column-left{
+    display:inline-block;
+    background: darkslategray;
+    height: calc(100vh - 3.8em);
+    margin-left:0;
+    padding:0;
+}
+ul{
+    list-style: none;
+}
+.ability-Scores{
+    border: 1px grey;
+    background: grey;
+}
+.rounded-rectangle {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    padding: 0.5em 1em;
+    border-radius: 10px 10px 10px 10px;
+    background: #222831;
+}
+.section-top {
+    width: 43em;
+    height: 7em;
+    vertical-align: top;
+}
