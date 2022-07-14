@@ -39,7 +39,7 @@
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="#"
-                  ><i class="fa-solid fa-user-plus"></i> Character Builder</a
+                  ><i class="fa-solid fa-user-plus"></i>Character Builder</a
                 >
               </li>
               <li class="nav-item">
@@ -59,27 +59,35 @@
     </header>
     <div class="container-fluid main-body">
       <div class="row">
-        <div class="col-md-3 main-column-left">
+        <div class="d-none d-md-block col-sm-2 col-md-3 main-column-left text-white rounded-rectangle">
           <h3>Character Builder</h3>
-          <div class="col">
+          <div class="button-holder">
             <ul>
               <li>
-                <button type="button"class="btn-dark">Race</button>
+                <div class="small-margin-right-bottom div-button text-white">Race</div>
               </li>
               <li>
-                <button type="button"class="btn-dark">Class</button>
+                <div class="small-margin-right-bottom div-button text-white">Class</button>
               </li>
               <li>
-                <button type="button"class="btn-dark">Ability Scores</button>
-              </li>
-              <li>
-                <button type="button"class="btn-dark">1st Feat</button>
+                <div class="small-margin-right-bottom div-button text-white">Ability Scores</div>
               </li>
             </ul>
           </div>
         </div>
-        <div class="section-top rounded-rectangle">
-           <h4 class="text-white">Strength</h2>
+        <div class="col-fluid col-md-9 main-column-right">
+          <div class="row">
+            <div class="col-fluid section-top rounded-rectangle char-info ml-md-1">
+              <h4 class="text-white">Character Information</h4>
+              <input class="text-input text-white" placeholder="Character Name">
+
+            </div>
+          </div>
+            <div class="row">
+              <div class="col-4 rounded-rectangle section-ability-scores ml-md-1">
+                <h4 class="text-white">Ability Scores</h4>
+              </div>
+            </div>
           </div>
         </div>
       </div>
