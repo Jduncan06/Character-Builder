@@ -17,14 +17,16 @@
       rel="stylesheet"
       href="node_modules/font-awesome/css/font-awesome.min.css"
     />
+    <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <script
       src="https://kit.fontawesome.com/599b31d8e0.js"
       crossorigin="anonymous"
     ></script>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="text-white">
     <header>
+      <!--Navbar-collapses to hamburger on  small screens-->
       <nav class="navbar navbar-expand-sm navbar-dark">
         <div class="container">
           <button
@@ -35,22 +37,23 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <h3 class="title text-sm-left">ADVENTURE AWAITS!</h3>
           <div class="collapse navbar-collapse" id="pcNavbar">
             <ul class="navbar-nav ml-auto">
               <li class="nav-item active">
                 <a class="nav-link" href="#"
                   ><i class="fa-solid fa-user-plus"></i>Character Builder</a
-                >
+                ><!--create script to toggle character builder panel-->
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="character-list.html"
                   ><i class="fa-solid fa-users fa-lg"></i> Character List</a
-                >
+                ><!--Opens dropdown showing saved characters-->
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="https://www.d20pfsrd.com/"
                   ><i class="fa-solid fa-scroll fa-lg"></i> PRD</a
-                >
+                ><!--Directs to pathfinder reference document-->
               </li>
             </ul>
           </div>
@@ -58,35 +61,85 @@
       </nav>
     </header>
     <div class="container-fluid main-body">
-      <div class="row">
-        <div class="d-none d-md-block col-sm-2 col-md-3 main-column-left text-white rounded-rectangle">
+      <div class="row"><!--top row of sections Info, HP, Init (Character builder)-->
+        <div class="d-none d-md-block col-sm-2 col-md-3 main-column-left rounded-rectangle">
           <h3>Character Builder</h3>
           <div class="button-holder">
-            <ul>
-              <li>
-                <div class="small-margin-right-bottom div-button text-white">Race</div>
+            <ul class="ul-char-build">
+              <li><!--Need modal popup to choose race-->
+                <div class="small-margin-right-bottom div-button">Race</div>
               </li>
-              <li>
-                <div class="small-margin-right-bottom div-button text-white">Class</button>
+              <li><!--Need modal popup to choose class-->
+                <div class="small-margin-right-bottom div-button">Class</button>
               </li>
-              <li>
-                <div class="small-margin-right-bottom div-button text-white">Ability Scores</div>
+              <li><!--Need modal popup to choose how we are assigning ability scores and to choose them-->
+                <div class="small-margin-right-bottom div-button">Ability Scores</div>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-fluid col-md-9 main-column-right">
           <div class="row">
-            <div class="col-fluid section-top rounded-rectangle char-info ml-md-1">
-              <h4 class="text-white">Character Information</h4>
-              <input class="text-input text-white" placeholder="Character Name">
-
+            <!--top section-->
+            <div class="col-8 section-top rounded-rectangle char-info ml-md-1">
+              <div class="row">
+                <div class="col-6">
+                  <h4>Character Information</h4>
+                  <p class=>XP: <input class="text-input col-8" placeholder="XP"></p>
+                  <div class="dropdown">
+                    <button class="btn btn-secondary alignmentBtn dropdown-toggle" type="button" id="alignmentDropdownButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      Alignment
+                    </button>
+                    <!--Need to fix dropdown to show alignment picked-->
+                    <div class="dropdown-menu" aria-labelledby="alignmentDropdownButton">
+                      <a class="dropdown-item" href="#">Lawful-Good</a>
+                      <a class="dropdown-item" href="#">Neutral-Good</a>
+                      <a class="dropdown-item" href="#">Chaotic-Good</a>
+                      <a class="dropdown-item" href="#">Lawful-Neutral</a>
+                      <a class="dropdown-item" href="#">Neutral</a>
+                      <a class="dropdown-item" href="#">Chaotic-Neutral</a>
+                      <a class="dropdown-item" href="#">Lawful-Evil</a>
+                      <a class="dropdown-item" href="#">Neutral-Evil</a>
+                      <a class="dropdown-item" href="#">Chaotic-Evil</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6">
+                  <ul class= "pb-4 pb-xl-0">
+                    <li><input class="text-input" placeholder="Character Name"></li>
+                    <li>Race:</li><!--Write script to show chosen race here-->
+                    <li>Class:</li><!--Write script to show chosen class here-->
+                    <li>Level:</li><!--Add number picker modal for level and write script to add level-ups to character builder-->
+                    <li><input class="text-input" placeholder="Deity"></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col section-top rounded-rectangle hp">
+              <h4>HP</h4><!--Need Max HP calculation script-->
+                <p>Current: <input class="text-input col-3 " placeholder="HP"> /</p>
+                <h4>Initiative</h4>
+                <!--Need script to roll d20+ init bonus-->
+                <div class="div-button init ">ROLL Initiatiave</button>
+              </div>
             </div>
           </div>
-            <div class="row">
-              <div class="col-4 rounded-rectangle section-ability-scores ml-md-1">
-                <h4 class="text-white">Ability Scores</h4>
-              </div>
+          <!--End of top section-->
+          <div class="row middle-section">
+            <!--Middle Section-->
+            <div class="col col-sm-4 rounded-rectangle section-ability-scores ml-md-1">
+              <ul class="ul-abilities"><h4>Ability Scores</h4>
+                <!--Add number spinners and scripts to increase/decrease correct abilities with racial bonuses-->
+                <li>Strength</li>
+                <li>Dexterity</li>
+                <li>Constitution</li>
+                <li>Intelligence</li>
+                <li>Wisdom</li>
+                <li>Charisma</li>
+              </ul>
+            </div>
+            <div class="col-sm-7 section-saves rounded-rectangle">
+              <h4>Saves</h4>
             </div>
           </div>
         </div>

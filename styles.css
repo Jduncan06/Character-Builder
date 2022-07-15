@@ -3,8 +3,11 @@ html body{
 }
 .navbar{
     background-color: darkblue;
+    
 }
-
+.title{
+    font-family: 'Rock Salt', cursive;
+}
 .main-column-left{
     display:inline-block;
     background: darkslategray;
@@ -43,7 +46,7 @@ ul{
     margin-right: 0.3em;
 }
 .section-ability-scores{
-    
+    margin-top: 1px;
     width:100%;
     height:fit-content;
     background: #222831;
@@ -57,7 +60,38 @@ ul{
     height:100%;
 }
 .text-input{
+    cursor: pointer;
     background: #222831;
     outline-color: darkblue;
     border-color: blue;
+    width:100%
+}
+.ul-abilities{
+    padding:0;
+}
+.alignmentBtn{
+    outline-color: #2d4059;
+    width: 85%;
+    text-align: right;
+    text-decoration-color: white;
+    background-color: #2d4059;
+}
+.hp{
+    margin-left: 1px;
+    padding-bottom: 0;
+    height:fit-content;
+}
+.section-saves{
+    margin-top: 1px;
+    margin-right: 0;
+    margin-left: 1px;
+    width:100%;
+    height:fit-content;
+    background: #222831;
+}
+.init{
+    width: 50%;
+    height: 85%;
+    margin-top: 1px;
+    margin-bottom: 5px;
 }
